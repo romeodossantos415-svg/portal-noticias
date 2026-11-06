@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+
+# Variáveis PÚBLICAS (vão para o navegador de qualquer forma).
+# A SUPABASE_SERVICE_ROLE_KEY é secreta e deve ser adicionada apenas em
+# Netlify → Project configuration → Environment variables.
+[build.environment]
+  NEXT_PUBLIC_SUPABASE_URL = "https://tyysyupigncsmuysgnfp.supabase.co"
+  NEXT_PUBLIC_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR5eXN5dXBpZ25jc211eXNnbmZwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM4MjgyNjUsImV4cCI6MjEwOTQwNDI2NX0.er700YligX8CCSjg7NYw5Hi-nduZ6bb_I5gid3VLPAA"
+  NEXT_PUBLIC_SITE_URL = "https://magnificent-sorbet-4bf334.netlify.app"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
